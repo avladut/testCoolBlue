@@ -8,6 +8,6 @@
 
 import Foundation
 protocol DatasourceUpdateDelegate : class {
-    func updateDatasource()
+    func dataRetrieved(shouldUpdate:Bool)
     func updateDatasourceFailed(errorMessage:String)
 }

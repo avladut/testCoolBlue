@@ -10,7 +10,6 @@
 		5CC1F531D1C326BDB5F15588 /* Pods_CoolBlueTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AAAAC12C9CFFED48D792C /* Pods_CoolBlueTest.framework */; };
 		7633B8FB7222ED70513C28B2 /* Pods_CoolBlueTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF11144E105694389CA84965 /* Pods_CoolBlueTestTests.framework */; };
 		EE3386C320FB332000DFBFFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386C220FB332000DFBFFA /* AppDelegate.swift */; };
-		EE3386C520FB332000DFBFFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386C420FB332000DFBFFA /* ViewController.swift */; };
 		EE3386C820FB332000DFBFFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3386C620FB332000DFBFFA /* Main.storyboard */; };
 		EE3386CB20FB332000DFBFFA /* CoolBlueTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE3386C920FB332000DFBFFA /* CoolBlueTest.xcdatamodeld */; };
 		EE3386CD20FB332000DFBFFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3386CC20FB332000DFBFFA /* Assets.xcassets */; };
@@ -47,7 +46,6 @@
 		EA80F3077EB1B94675B714EC /* Pods-CoolBlueTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueTest/Pods-CoolBlueTest.release.xcconfig"; sourceTree = "<group>"; };
 		EE3386BF20FB332000DFBFFA /* CoolBlueTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolBlueTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE3386C220FB332000DFBFFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EE3386C420FB332000DFBFFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE3386C720FB332000DFBFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE3386CA20FB332000DFBFFA /* CoolBlueTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoolBlueTest.xcdatamodel; sourceTree = "<group>"; };
 		EE3386CC20FB332000DFBFFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				EE3386EF20FB3F6F00DFBFFA /* Custom views */,
 				EE3386E520FB3DEA00DFBFFA /* Classes */,
 				EE3386E620FB3DFA00DFBFFA /* Screens */,
-				EE3386C420FB332000DFBFFA /* ViewController.swift */,
 				EE3386C620FB332000DFBFFA /* Main.storyboard */,
 				EE3386CC20FB332000DFBFFA /* Assets.xcassets */,
 				EE3386CE20FB332000DFBFFA /* LaunchScreen.storyboard */,
@@ -398,7 +395,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE3386C520FB332000DFBFFA /* ViewController.swift in Sources */,
 				EE3386C320FB332000DFBFFA /* AppDelegate.swift in Sources */,
 				EE3386ED20FB3F6800DFBFFA /* ErrorHandlerManager.swift in Sources */,
 				EE3386F320FB53C500DFBFFA /* SearchScreenVC.swift in Sources */,

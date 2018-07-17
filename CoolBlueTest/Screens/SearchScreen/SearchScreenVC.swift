@@ -14,13 +14,14 @@ class SearchScreenVC: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tblProducts: UITableView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var lblSearchStatus: UILabel!
     private let searchTableVM = SearchTableVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchTableVM.delegate = self
-        self.tblProducts.tableFooterView = UIView()
+        initUI()
         // Do any additional setup after loading the view.
     }
 
@@ -29,6 +30,21 @@ class SearchScreenVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    private func initUI() {
+        self.tblProducts.tableFooterView = UIView()
+        self.activityIndicator.isHidden = true
+    }
+    
+    private func startSearchAction(query:String?){
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+        self.lblSearchStatus.text = "Loading results"
+        if let queryUnwr = query {
+            self.searchTableVM.searchFor(searchString: queryUnwr)
+        } else {
+             searchTableVM.search()
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -56,7 +72,8 @@ extension SearchScreenVC : UITableViewDataSource {
         
         //if the last cell is loaded, load more data
         if indexPath.row == (searchTableVM.getNumberOfRowsForSectionIndex(indexPath.section) - 1) {
-            searchTableVM.search()
+            //load more pages of a previous query
+            startSearchAction(query: nil)
         }
         
         return cell
@@ -71,7 +88,7 @@ extension SearchScreenVC : UITableViewDelegate {
 extension SearchScreenVC : UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text {
-            self.searchTableVM.searchFor(searchString: text)
+            startSearchAction(query: text)
             searchBar.resignFirstResponder()
         }
     }
@@ -82,9 +99,14 @@ extension SearchScreenVC : UISearchBarDelegate{
 }
 
 extension SearchScreenVC : DatasourceUpdateDelegate {
-    func updateDatasource(){
-        self.tblProducts.reloadData()
+
+    func dataRetrieved(shouldUpdate: Bool) {
+        if shouldUpdate {
+            self.tblProducts.reloadData()
+        }
         self.lblSearchStatus.text = self.searchTableVM.getSearchDetails()
+        self.activityIndicator.isHidden = true
+        self.activityIndicator.stopAnimating()
     }
     func updateDatasourceFailed(errorMessage:String) {
         ErrorHandlerManager.sharedInstance.showError(message: errorMessage, parentVC: self)

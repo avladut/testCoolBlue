@@ -21,9 +21,8 @@ class SearchTableVM {
     public weak var delegate:DatasourceUpdateDelegate?
     
     public func searchFor(searchString:String){
-        if strSearchQuery != searchString {
-            strSearchQuery = searchString
-        }
+        
+        strSearchQuery = searchString
         self.search()
     }
     
@@ -31,7 +30,9 @@ class SearchTableVM {
         guard let searchQueryUnwr = strSearchQuery else {
             return
         }
+        //if there are no more pages to load
         if intLastSearchedPage >= intPageLimit {
+            self.delegate?.dataRetrieved(shouldUpdate: false)
             return
         }
         intLastSearchedPage += 1
@@ -52,8 +53,13 @@ class SearchTableVM {
                     let productVM = ProductViewModel(product: product)
                     self?.arrItems.append(productVM)
                 }
-                //task complete, notify the View to update data
-                self?.delegate?.updateDatasource()
+                
+                //the delay is used to simulate slower connection
+                //this should not go in production
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                    self?.delegate?.dataRetrieved(shouldUpdate: true)
+                })
+                
             } else {
                 //something failed, send a message
                 self?.delegate?.updateDatasourceFailed(errorMessage: "Something really bad happened")
@@ -65,6 +71,7 @@ class SearchTableVM {
         intPageLimit = 1
         intLastSearchedPage = 0
         arrItems = []
+        self.delegate?.dataRetrieved(shouldUpdate: true)
     }
     
     public func getNumberOfSections() -> Int {
@@ -83,6 +90,7 @@ class SearchTableVM {
         }
     }
     
+    //for testing purpose only
     public func getSearchDetails() -> String {
         return "number of results: \(arrItems.count) pages loaded \(intLastSearchedPage) of \(intPageLimit)"
     }
