@@ -16,11 +16,11 @@ class SearchScreenVC: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var lblSearchStatus: UILabel!
-    private let searchTableVM = SearchTableVM()
+    private let productsViewModel = SearchTableVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchTableVM.delegate = self
+        productsViewModel.delegate = self
         initUI()
         // Do any additional setup after loading the view.
     }
@@ -40,38 +40,39 @@ class SearchScreenVC: UIViewController {
         self.activityIndicator.startAnimating()
         self.lblSearchStatus.text = "Loading results"
         if let queryUnwr = query {
-            self.searchTableVM.searchFor(searchString: queryUnwr)
+            self.productsViewModel.searchFor(searchString: queryUnwr)
         } else {
-             searchTableVM.search()
+             productsViewModel.search()
         }
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let productDetailsVC = segue.destination as? ProductDetailsVC, let productID = sender as? String {
+            productDetailsVC.productID = productID
+        }
     }
-    */
+    
 
 }
 
 extension SearchScreenVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchTableVM.getNumberOfRowsForSectionIndex(section)
+        return productsViewModel.getNumberOfRowsForSectionIndex(section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let productViewModel = searchTableVM.getProductViewModelAtIndexPath(index: indexPath)  else {
+        guard let productViewModel = productsViewModel.getProductViewModelAtIndexPath(index: indexPath)  else {
             return UITableViewCell()
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCellReuseID", for: indexPath) as! ProductCell
         cell.config(productVM: productViewModel)
         
         //if the last cell is loaded, load more data
-        if indexPath.row == (searchTableVM.getNumberOfRowsForSectionIndex(indexPath.section) - 1) {
+        if indexPath.row == (productsViewModel.getNumberOfRowsForSectionIndex(indexPath.section) - 1) {
             //load more pages of a previous query
             startSearchAction(query: nil)
         }
@@ -82,7 +83,11 @@ extension SearchScreenVC : UITableViewDataSource {
 }
 
 extension SearchScreenVC : UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let product = self.productsViewModel.getProductViewModelAtIndexPath(index: indexPath) {
+            self.performSegue(withIdentifier: "toProductDetails", sender: product.productID)
+        }
+    }
 }
 
 extension SearchScreenVC : UISearchBarDelegate{
@@ -104,7 +109,7 @@ extension SearchScreenVC : DatasourceUpdateDelegate {
         if shouldUpdate {
             self.tblProducts.reloadData()
         }
-        self.lblSearchStatus.text = self.searchTableVM.getSearchDetails()
+        self.lblSearchStatus.text = self.productsViewModel.getSearchDetails()
         self.activityIndicator.isHidden = true
         self.activityIndicator.stopAnimating()
     }

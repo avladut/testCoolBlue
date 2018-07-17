@@ -27,4 +27,14 @@ public class NetworkRequestManager {
             
         }
     }
+    
+    public func requestProductDetailsWithID(_ productID:String, completion: @escaping (_ response:Dictionary<String, Any>?, _ err:Error?)->Void) {
+        
+        let productUrl:String = "\(baseURLString)product/\(productID)"
+        Alamofire.request(productUrl, method: .get, parameters: nil, encoding: URLEncoding.queryString, headers: nil).validate().responseJSON { (response) in
+            //print (response)
+            let responseDict = response.result.value as? Dictionary<String, Any>
+            completion(responseDict, response.error)
+        }
+    }
 }

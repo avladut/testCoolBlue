@@ -14,7 +14,10 @@ class ProductBasic {
     var productImagePath:String?
     
     init(dict:Dictionary<String, Any>){
-        productID = dict[Constants.JsonKeyNames.productID] as? String
+        if let productIdAsInt = dict[Constants.JsonKeyNames.productID] as? Int{
+            productID = String(describing:productIdAsInt)
+        }
+        
         productName = dict[Constants.JsonKeyNames.productName] as? String
         productPrice = dict[Constants.JsonKeyNames.productPrice] as? Float
         productImagePath = dict[Constants.JsonKeyNames.productImage] as? String

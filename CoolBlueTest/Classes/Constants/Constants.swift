@@ -12,6 +12,7 @@ struct Constants {
     struct JsonKeyNames {
         static let productID = "productId"
         static let productName = "productName"
+        static let productText = "productText"
         static let productPrice = "salesPriceIncVat"
         static let productImage = "productImage"
         static let pageCount = "pageCount"

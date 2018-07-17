@@ -117,23 +117,48 @@
                         <outlet property="lblSearchStatus" destination="Q4d-MB-mZk" id="D9b-Oe-Y2P"/>
                         <outlet property="searchBar" destination="ELg-jX-dbW" id="hEc-6v-hCl"/>
                         <outlet property="tblProducts" destination="ccG-Ib-FRD" id="FAl-if-r2t"/>
-                        <segue destination="PgU-Ih-duU" kind="show" id="Law-0F-ABL"/>
+                        <segue destination="PgU-Ih-duU" kind="show" identifier="toProductDetails" id="Law-0F-ABL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="456.80000000000001" y="106.59670164917542"/>
         </scene>
-        <!--View Controller-->
+        <!--Product DetailsVC-->
         <scene sceneID="gye-zd-nnS">
             <objects>
-                <viewController id="PgU-Ih-duU" sceneMemberID="viewController">
+                <viewController id="PgU-Ih-duU" customClass="ProductDetailsVC" customModule="CoolBlueTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A7f-lp-vxD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Product description&gt;" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8w-69-LTA">
+                                <rect key="frame" x="16" y="142" width="172" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Product name&gt;" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBb-XH-xZK">
+                                <rect key="frame" x="123" y="82" width="128.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CBb-XH-xZK" firstAttribute="centerX" secondItem="gAh-Wb-0UY" secondAttribute="centerX" id="3l5-gc-Uy7"/>
+                            <constraint firstItem="gAh-Wb-0UY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c8w-69-LTA" secondAttribute="trailing" constant="16" id="5Ux-ew-Bun"/>
+                            <constraint firstItem="c8w-69-LTA" firstAttribute="leading" secondItem="gAh-Wb-0UY" secondAttribute="leading" constant="16" id="Vcq-YT-Roe"/>
+                            <constraint firstItem="c8w-69-LTA" firstAttribute="top" secondItem="CBb-XH-xZK" secondAttribute="bottom" constant="39" id="Znl-aU-Bm1"/>
+                            <constraint firstItem="CBb-XH-xZK" firstAttribute="top" secondItem="gAh-Wb-0UY" secondAttribute="top" constant="18" id="xP5-AG-xqM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gAh-Wb-0UY"/>
                     </view>
+                    <connections>
+                        <outlet property="lblProductDescription" destination="c8w-69-LTA" id="EAa-Zw-wjl"/>
+                        <outlet property="lblProductName" destination="CBb-XH-xZK" id="6jI-mq-vBM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSD-6H-cvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
