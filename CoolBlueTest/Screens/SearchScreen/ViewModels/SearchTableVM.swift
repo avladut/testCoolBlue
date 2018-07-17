@@ -27,7 +27,7 @@ class SearchTableVM {
         self.search()
     }
     
-    private func search() {
+    public func search() {
         guard let searchQueryUnwr = strSearchQuery else {
             return
         }
@@ -84,6 +84,6 @@ class SearchTableVM {
     }
     
     public func getSearchDetails() -> String {
-        return "number of results: \(arrItems.count) page \(intLastSearchedPage) of \(intPageLimit)"
+        return "number of results: \(arrItems.count) pages loaded \(intLastSearchedPage) of \(intPageLimit)"
     }
 }

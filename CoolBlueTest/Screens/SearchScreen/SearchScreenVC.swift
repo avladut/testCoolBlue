@@ -20,6 +20,7 @@ class SearchScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchTableVM.delegate = self
+        self.tblProducts.tableFooterView = UIView()
         // Do any additional setup after loading the view.
     }
 
@@ -52,6 +53,12 @@ extension SearchScreenVC : UITableViewDataSource {
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCellReuseID", for: indexPath) as! ProductCell
         cell.config(productVM: productViewModel)
+        
+        //if the last cell is loaded, load more data
+        if indexPath.row == (searchTableVM.getNumberOfRowsForSectionIndex(indexPath.section) - 1) {
+            searchTableVM.search()
+        }
+        
         return cell
     }
     
