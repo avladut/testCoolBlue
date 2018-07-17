@@ -1,0 +1,676 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CC1F531D1C326BDB5F15588 /* Pods_CoolBlueTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39AAAAC12C9CFFED48D792C /* Pods_CoolBlueTest.framework */; };
+		7633B8FB7222ED70513C28B2 /* Pods_CoolBlueTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF11144E105694389CA84965 /* Pods_CoolBlueTestTests.framework */; };
+		EE3386C320FB332000DFBFFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386C220FB332000DFBFFA /* AppDelegate.swift */; };
+		EE3386C520FB332000DFBFFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386C420FB332000DFBFFA /* ViewController.swift */; };
+		EE3386C820FB332000DFBFFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3386C620FB332000DFBFFA /* Main.storyboard */; };
+		EE3386CB20FB332000DFBFFA /* CoolBlueTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE3386C920FB332000DFBFFA /* CoolBlueTest.xcdatamodeld */; };
+		EE3386CD20FB332000DFBFFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3386CC20FB332000DFBFFA /* Assets.xcassets */; };
+		EE3386D020FB332000DFBFFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3386CE20FB332000DFBFFA /* LaunchScreen.storyboard */; };
+		EE3386DB20FB332000DFBFFA /* CoolBlueTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386DA20FB332000DFBFFA /* CoolBlueTestTests.swift */; };
+		EE3386EA20FB3E6A00DFBFFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386E920FB3E6A00DFBFFA /* Constants.swift */; };
+		EE3386ED20FB3F6800DFBFFA /* ErrorHandlerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386EB20FB3F6800DFBFFA /* ErrorHandlerManager.swift */; };
+		EE3386EE20FB3F6800DFBFFA /* NetworkRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386EC20FB3F6800DFBFFA /* NetworkRequestManager.swift */; };
+		EE3386F320FB53C500DFBFFA /* SearchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386F220FB53C500DFBFFA /* SearchScreenVC.swift */; };
+		EE3386F620FB53F300DFBFFA /* SearchTableVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386F520FB53F300DFBFFA /* SearchTableVM.swift */; };
+		EE3386F820FB5AE100DFBFFA /* ProductBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386F720FB5AE100DFBFFA /* ProductBasic.swift */; };
+		EE3386FA20FB636C00DFBFFA /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386F920FB636C00DFBFFA /* ProductCell.swift */; };
+		EE37F33720FDAD880052B48D /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37F33620FDAD880052B48D /* ProductDetails.swift */; };
+		EE37F33920FDADC00052B48D /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37F33820FDADC00052B48D /* ProductCellViewModel.swift */; };
+		EE37F33C20FDB59E0052B48D /* DatasourceUpdateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37F33B20FDB59E0052B48D /* DatasourceUpdateProtocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE3386D720FB332000DFBFFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE3386B720FB332000DFBFFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE3386BE20FB332000DFBFFA;
+			remoteInfo = CoolBlueTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B232CE83A3B38278FE8F461 /* Pods-CoolBlueTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueTestTests/Pods-CoolBlueTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2ADA718569870A5DDDE23606 /* Pods-CoolBlueTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueTestTests/Pods-CoolBlueTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		551D429BFA1282BF49A1BADC /* Pods-CoolBlueTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueTest/Pods-CoolBlueTest.debug.xcconfig"; sourceTree = "<group>"; };
+		AF11144E105694389CA84965 /* Pods_CoolBlueTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolBlueTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39AAAAC12C9CFFED48D792C /* Pods_CoolBlueTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoolBlueTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA80F3077EB1B94675B714EC /* Pods-CoolBlueTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoolBlueTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoolBlueTest/Pods-CoolBlueTest.release.xcconfig"; sourceTree = "<group>"; };
+		EE3386BF20FB332000DFBFFA /* CoolBlueTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolBlueTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3386C220FB332000DFBFFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE3386C420FB332000DFBFFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE3386C720FB332000DFBFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE3386CA20FB332000DFBFFA /* CoolBlueTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoolBlueTest.xcdatamodel; sourceTree = "<group>"; };
+		EE3386CC20FB332000DFBFFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE3386CF20FB332000DFBFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE3386D120FB332000DFBFFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE3386D620FB332000DFBFFA /* CoolBlueTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolBlueTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3386DA20FB332000DFBFFA /* CoolBlueTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolBlueTestTests.swift; sourceTree = "<group>"; };
+		EE3386DC20FB332000DFBFFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE3386E920FB3E6A00DFBFFA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EE3386EB20FB3F6800DFBFFA /* ErrorHandlerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandlerManager.swift; sourceTree = "<group>"; };
+		EE3386EC20FB3F6800DFBFFA /* NetworkRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestManager.swift; sourceTree = "<group>"; };
+		EE3386F220FB53C500DFBFFA /* SearchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenVC.swift; sourceTree = "<group>"; };
+		EE3386F520FB53F300DFBFFA /* SearchTableVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableVM.swift; sourceTree = "<group>"; };
+		EE3386F720FB5AE100DFBFFA /* ProductBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBasic.swift; sourceTree = "<group>"; };
+		EE3386F920FB636C00DFBFFA /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		EE37F33620FDAD880052B48D /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
+		EE37F33820FDADC00052B48D /* ProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModel.swift; sourceTree = "<group>"; };
+		EE37F33B20FDB59E0052B48D /* DatasourceUpdateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatasourceUpdateProtocol.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE3386BC20FB332000DFBFFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC1F531D1C326BDB5F15588 /* Pods_CoolBlueTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE3386D320FB332000DFBFFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7633B8FB7222ED70513C28B2 /* Pods_CoolBlueTestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		639EDAF137AB007FBD6DB7A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D39AAAAC12C9CFFED48D792C /* Pods_CoolBlueTest.framework */,
+				AF11144E105694389CA84965 /* Pods_CoolBlueTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93F1E4C5B410ED993486D2A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				551D429BFA1282BF49A1BADC /* Pods-CoolBlueTest.debug.xcconfig */,
+				EA80F3077EB1B94675B714EC /* Pods-CoolBlueTest.release.xcconfig */,
+				0B232CE83A3B38278FE8F461 /* Pods-CoolBlueTestTests.debug.xcconfig */,
+				2ADA718569870A5DDDE23606 /* Pods-CoolBlueTestTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE3386B620FB332000DFBFFA = {
+			isa = PBXGroup;
+			children = (
+				EE3386C120FB332000DFBFFA /* CoolBlueTest */,
+				EE3386D920FB332000DFBFFA /* CoolBlueTestTests */,
+				EE3386C020FB332000DFBFFA /* Products */,
+				93F1E4C5B410ED993486D2A7 /* Pods */,
+				639EDAF137AB007FBD6DB7A8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EE3386C020FB332000DFBFFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE3386BF20FB332000DFBFFA /* CoolBlueTest.app */,
+				EE3386D620FB332000DFBFFA /* CoolBlueTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE3386C120FB332000DFBFFA /* CoolBlueTest */ = {
+			isa = PBXGroup;
+			children = (
+				EE3386EF20FB3F6F00DFBFFA /* Custom views */,
+				EE3386E520FB3DEA00DFBFFA /* Classes */,
+				EE3386E620FB3DFA00DFBFFA /* Screens */,
+				EE3386C420FB332000DFBFFA /* ViewController.swift */,
+				EE3386C620FB332000DFBFFA /* Main.storyboard */,
+				EE3386CC20FB332000DFBFFA /* Assets.xcassets */,
+				EE3386CE20FB332000DFBFFA /* LaunchScreen.storyboard */,
+				EE3386D120FB332000DFBFFA /* Info.plist */,
+				EE3386C920FB332000DFBFFA /* CoolBlueTest.xcdatamodeld */,
+			);
+			path = CoolBlueTest;
+			sourceTree = "<group>";
+		};
+		EE3386D920FB332000DFBFFA /* CoolBlueTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE3386DA20FB332000DFBFFA /* CoolBlueTestTests.swift */,
+				EE3386DC20FB332000DFBFFA /* Info.plist */,
+			);
+			path = CoolBlueTestTests;
+			sourceTree = "<group>";
+		};
+		EE3386E520FB3DEA00DFBFFA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EE37F33A20FDB5430052B48D /* Protocols */,
+				EE3386F020FB3F7D00DFBFFA /* Models */,
+				EE3386E820FB3E4C00DFBFFA /* Constants */,
+				EE3386E720FB3E3A00DFBFFA /* Singletons */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EE3386E620FB3DFA00DFBFFA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				EE3386F120FB539000DFBFFA /* SearchScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		EE3386E720FB3E3A00DFBFFA /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				EE3386EB20FB3F6800DFBFFA /* ErrorHandlerManager.swift */,
+				EE3386EC20FB3F6800DFBFFA /* NetworkRequestManager.swift */,
+				EE3386C220FB332000DFBFFA /* AppDelegate.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		EE3386E820FB3E4C00DFBFFA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EE3386E920FB3E6A00DFBFFA /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		EE3386EF20FB3F6F00DFBFFA /* Custom views */ = {
+			isa = PBXGroup;
+			children = (
+				EE3386F920FB636C00DFBFFA /* ProductCell.swift */,
+			);
+			path = "Custom views";
+			sourceTree = "<group>";
+		};
+		EE3386F020FB3F7D00DFBFFA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE3386F720FB5AE100DFBFFA /* ProductBasic.swift */,
+				EE37F33620FDAD880052B48D /* ProductDetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE3386F120FB539000DFBFFA /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EE3386F420FB53CD00DFBFFA /* ViewModels */,
+				EE3386F220FB53C500DFBFFA /* SearchScreenVC.swift */,
+			);
+			path = SearchScreen;
+			sourceTree = "<group>";
+		};
+		EE3386F420FB53CD00DFBFFA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EE3386F520FB53F300DFBFFA /* SearchTableVM.swift */,
+				EE37F33820FDADC00052B48D /* ProductCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EE37F33A20FDB5430052B48D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EE37F33B20FDB59E0052B48D /* DatasourceUpdateProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE3386BE20FB332000DFBFFA /* CoolBlueTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE3386DF20FB332000DFBFFA /* Build configuration list for PBXNativeTarget "CoolBlueTest" */;
+			buildPhases = (
+				CA5807A93BD802D2664534BB /* [CP] Check Pods Manifest.lock */,
+				EE3386BB20FB332000DFBFFA /* Sources */,
+				EE3386BC20FB332000DFBFFA /* Frameworks */,
+				EE3386BD20FB332000DFBFFA /* Resources */,
+				8F3202D12E2F05F9AA771285 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoolBlueTest;
+			productName = CoolBlueTest;
+			productReference = EE3386BF20FB332000DFBFFA /* CoolBlueTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE3386D520FB332000DFBFFA /* CoolBlueTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE3386E220FB332000DFBFFA /* Build configuration list for PBXNativeTarget "CoolBlueTestTests" */;
+			buildPhases = (
+				529891C2C8283188DB49DBB7 /* [CP] Check Pods Manifest.lock */,
+				EE3386D220FB332000DFBFFA /* Sources */,
+				EE3386D320FB332000DFBFFA /* Frameworks */,
+				EE3386D420FB332000DFBFFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE3386D820FB332000DFBFFA /* PBXTargetDependency */,
+			);
+			name = CoolBlueTestTests;
+			productName = CoolBlueTestTests;
+			productReference = EE3386D620FB332000DFBFFA /* CoolBlueTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE3386B720FB332000DFBFFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Alexandru Vladut";
+				TargetAttributes = {
+					EE3386BE20FB332000DFBFFA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					EE3386D520FB332000DFBFFA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE3386BE20FB332000DFBFFA;
+					};
+				};
+			};
+			buildConfigurationList = EE3386BA20FB332000DFBFFA /* Build configuration list for PBXProject "CoolBlueTest" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE3386B620FB332000DFBFFA;
+			productRefGroup = EE3386C020FB332000DFBFFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE3386BE20FB332000DFBFFA /* CoolBlueTest */,
+				EE3386D520FB332000DFBFFA /* CoolBlueTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE3386BD20FB332000DFBFFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE3386D020FB332000DFBFFA /* LaunchScreen.storyboard in Resources */,
+				EE3386CD20FB332000DFBFFA /* Assets.xcassets in Resources */,
+				EE3386C820FB332000DFBFFA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE3386D420FB332000DFBFFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		529891C2C8283188DB49DBB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoolBlueTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F3202D12E2F05F9AA771285 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlueTest/Pods-CoolBlueTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlueTest/Pods-CoolBlueTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA5807A93BD802D2664534BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoolBlueTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE3386BB20FB332000DFBFFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE3386C520FB332000DFBFFA /* ViewController.swift in Sources */,
+				EE3386C320FB332000DFBFFA /* AppDelegate.swift in Sources */,
+				EE3386ED20FB3F6800DFBFFA /* ErrorHandlerManager.swift in Sources */,
+				EE3386F320FB53C500DFBFFA /* SearchScreenVC.swift in Sources */,
+				EE3386CB20FB332000DFBFFA /* CoolBlueTest.xcdatamodeld in Sources */,
+				EE3386EE20FB3F6800DFBFFA /* NetworkRequestManager.swift in Sources */,
+				EE37F33720FDAD880052B48D /* ProductDetails.swift in Sources */,
+				EE37F33C20FDB59E0052B48D /* DatasourceUpdateProtocol.swift in Sources */,
+				EE3386EA20FB3E6A00DFBFFA /* Constants.swift in Sources */,
+				EE3386FA20FB636C00DFBFFA /* ProductCell.swift in Sources */,
+				EE3386F620FB53F300DFBFFA /* SearchTableVM.swift in Sources */,
+				EE37F33920FDADC00052B48D /* ProductCellViewModel.swift in Sources */,
+				EE3386F820FB5AE100DFBFFA /* ProductBasic.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE3386D220FB332000DFBFFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE3386DB20FB332000DFBFFA /* CoolBlueTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE3386D820FB332000DFBFFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE3386BE20FB332000DFBFFA /* CoolBlueTest */;
+			targetProxy = EE3386D720FB332000DFBFFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE3386C620FB332000DFBFFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE3386C720FB332000DFBFFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE3386CE20FB332000DFBFFA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE3386CF20FB332000DFBFFA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE3386DD20FB332000DFBFFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE3386DE20FB332000DFBFFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE3386E020FB332000DFBFFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 551D429BFA1282BF49A1BADC /* Pods-CoolBlueTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ABRTAEV74;
+				INFOPLIST_FILE = CoolBlueTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.CoolBlueTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE3386E120FB332000DFBFFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA80F3077EB1B94675B714EC /* Pods-CoolBlueTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ABRTAEV74;
+				INFOPLIST_FILE = CoolBlueTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.CoolBlueTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE3386E320FB332000DFBFFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B232CE83A3B38278FE8F461 /* Pods-CoolBlueTestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ABRTAEV74;
+				INFOPLIST_FILE = CoolBlueTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.CoolBlueTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoolBlueTest.app/CoolBlueTest";
+			};
+			name = Debug;
+		};
+		EE3386E420FB332000DFBFFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ADA718569870A5DDDE23606 /* Pods-CoolBlueTestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ABRTAEV74;
+				INFOPLIST_FILE = CoolBlueTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.CoolBlueTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoolBlueTest.app/CoolBlueTest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE3386BA20FB332000DFBFFA /* Build configuration list for PBXProject "CoolBlueTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE3386DD20FB332000DFBFFA /* Debug */,
+				EE3386DE20FB332000DFBFFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE3386DF20FB332000DFBFFA /* Build configuration list for PBXNativeTarget "CoolBlueTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE3386E020FB332000DFBFFA /* Debug */,
+				EE3386E120FB332000DFBFFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE3386E220FB332000DFBFFA /* Build configuration list for PBXNativeTarget "CoolBlueTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE3386E320FB332000DFBFFA /* Debug */,
+				EE3386E420FB332000DFBFFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EE3386C920FB332000DFBFFA /* CoolBlueTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE3386CA20FB332000DFBFFA /* CoolBlueTest.xcdatamodel */,
+			);
+			currentVersion = EE3386CA20FB332000DFBFFA /* CoolBlueTest.xcdatamodel */;
+			path = CoolBlueTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EE3386B720FB332000DFBFFA /* Project object */;
+}

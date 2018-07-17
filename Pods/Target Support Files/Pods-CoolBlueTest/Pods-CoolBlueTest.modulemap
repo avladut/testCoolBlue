@@ -1,0 +1,6 @@
+framework module Pods_CoolBlueTest {
+  umbrella header "Pods-CoolBlueTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
