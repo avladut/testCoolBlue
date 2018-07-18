@@ -19,12 +19,13 @@
 		EE3386ED20FB3F6800DFBFFA /* ErrorHandlerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386EB20FB3F6800DFBFFA /* ErrorHandlerManager.swift */; };
 		EE3386EE20FB3F6800DFBFFA /* NetworkRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386EC20FB3F6800DFBFFA /* NetworkRequestManager.swift */; };
 		EE3386F320FB53C500DFBFFA /* SearchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386F220FB53C500DFBFFA /* SearchScreenVC.swift */; };
-		EE3386F620FB53F300DFBFFA /* SearchTableVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386F520FB53F300DFBFFA /* SearchTableVM.swift */; };
 		EE3386F820FB5AE100DFBFFA /* ProductBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386F720FB5AE100DFBFFA /* ProductBasic.swift */; };
 		EE3386FA20FB636C00DFBFFA /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3386F920FB636C00DFBFFA /* ProductCell.swift */; };
 		EE37F33720FDAD880052B48D /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37F33620FDAD880052B48D /* ProductDetails.swift */; };
 		EE37F33920FDADC00052B48D /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37F33820FDADC00052B48D /* ProductCellViewModel.swift */; };
 		EE37F33C20FDB59E0052B48D /* DatasourceUpdateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37F33B20FDB59E0052B48D /* DatasourceUpdateProtocol.swift */; };
+		EE3AC96A20FF183B00868999 /* TestSearchFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AC96920FF183B00868999 /* TestSearchFunction.swift */; };
+		EE3AC97020FF194300868999 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AC96F20FF194300868999 /* ProductListViewModel.swift */; };
 		EEA00DAB20FDD6A000352225 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA00DAA20FDD6A000352225 /* ProductDetailsVC.swift */; };
 		EEA00DAE20FDD70100352225 /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA00DAD20FDD70100352225 /* ProductDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -60,12 +61,13 @@
 		EE3386EB20FB3F6800DFBFFA /* ErrorHandlerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandlerManager.swift; sourceTree = "<group>"; };
 		EE3386EC20FB3F6800DFBFFA /* NetworkRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestManager.swift; sourceTree = "<group>"; };
 		EE3386F220FB53C500DFBFFA /* SearchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenVC.swift; sourceTree = "<group>"; };
-		EE3386F520FB53F300DFBFFA /* SearchTableVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableVM.swift; sourceTree = "<group>"; };
 		EE3386F720FB5AE100DFBFFA /* ProductBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBasic.swift; sourceTree = "<group>"; };
 		EE3386F920FB636C00DFBFFA /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		EE37F33620FDAD880052B48D /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
 		EE37F33820FDADC00052B48D /* ProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModel.swift; sourceTree = "<group>"; };
 		EE37F33B20FDB59E0052B48D /* DatasourceUpdateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatasourceUpdateProtocol.swift; sourceTree = "<group>"; };
+		EE3AC96920FF183B00868999 /* TestSearchFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSearchFunction.swift; sourceTree = "<group>"; };
+		EE3AC96F20FF194300868999 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		EEA00DAA20FDD6A000352225 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
 		EEA00DAD20FDD70100352225 /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +150,7 @@
 		EE3386D920FB332000DFBFFA /* CoolBlueTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				EE3AC96920FF183B00868999 /* TestSearchFunction.swift */,
 				EE3386DA20FB332000DFBFFA /* CoolBlueTestTests.swift */,
 				EE3386DC20FB332000DFBFFA /* Info.plist */,
 			);
@@ -221,8 +224,8 @@
 		EE3386F420FB53CD00DFBFFA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				EE3386F520FB53F300DFBFFA /* SearchTableVM.swift */,
 				EE37F33820FDADC00052B48D /* ProductCellViewModel.swift */,
+				EE3AC96F20FF194300868999 /* ProductListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -428,7 +431,7 @@
 				EE3386EA20FB3E6A00DFBFFA /* Constants.swift in Sources */,
 				EEA00DAE20FDD70100352225 /* ProductDetailsViewModel.swift in Sources */,
 				EE3386FA20FB636C00DFBFFA /* ProductCell.swift in Sources */,
-				EE3386F620FB53F300DFBFFA /* SearchTableVM.swift in Sources */,
+				EE3AC97020FF194300868999 /* ProductListViewModel.swift in Sources */,
 				EE37F33920FDADC00052B48D /* ProductCellViewModel.swift in Sources */,
 				EE3386F820FB5AE100DFBFFA /* ProductBasic.swift in Sources */,
 			);
@@ -439,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE3386DB20FB332000DFBFFA /* CoolBlueTestTests.swift in Sources */,
+				EE3AC96A20FF183B00868999 /* TestSearchFunction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
