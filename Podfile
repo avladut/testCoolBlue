@@ -8,6 +8,7 @@ target 'CoolBlueTest' do
   # Pods for CoolBlueTest
 pod 'Alamofire'
 pod 'SDWebImage', '~> 4.0'
+pod 'SwiftyJSON', '~> 4.0'
 
   target 'CoolBlueTestTests' do
     inherit! :search_paths

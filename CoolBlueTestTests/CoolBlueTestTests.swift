@@ -10,9 +10,35 @@ import XCTest
 @testable import CoolBlueTest
 
 class CoolBlueTestTests: XCTestCase {
+    var productListVM:ProductListViewModel?
+    var testHttpClient:HTTPRequestAPI?
+    private final class TestHttpClient:HTTPRequestAPI {
+        
+        func searchFor(_ searchString: String, page: Int, completion: @escaping (Dictionary<String, Any>?, Error?) -> Void) {
+            if let responseString = PlistManager.sharedInstance.getKeyFromPlist(plistName: TestConstants.testPlistFilename, key: TestConstants.key_test_search_json, bundle: Bundle(for: type(of: self))) as? String {
+                if let data = responseString.data(using: String.Encoding.utf8) {
+                    do {
+                        let jsonDictionary = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:Any]
+                        print(jsonDictionary)
+                        completion(jsonDictionary, nil)
+                    } catch {
+                        print("Something went wrong")
+                    }
+                }
+            }
+        }
+        
+        func requestProductDetailsWithID(_ productID: String, completion: @escaping (Dictionary<String, Any>?, Error?) -> Void) {
+            
+        }
+        
+        
+    }
     
     override func setUp() {
         super.setUp()
+        testHttpClient = TestHttpClient()
+        self.productListVM = ProductListViewModel(httpManager: testHttpClient!)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     

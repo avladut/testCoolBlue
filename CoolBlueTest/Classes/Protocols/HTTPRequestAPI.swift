@@ -10,4 +10,6 @@ import Foundation
 protocol HTTPRequestAPI : class {
     func searchFor(_ searchString:String, page:Int, completion: @escaping (_ response:Dictionary<String, Any>?, _ err:Error?)->Void)
     func requestProductDetailsWithID(_ productID:String, completion: @escaping (_ response:Dictionary<String, Any>?, _ err:Error?)->Void)
+    
+    //var strBaseURL:String?{get set}
 }

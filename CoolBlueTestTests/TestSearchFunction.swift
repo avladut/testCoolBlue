@@ -7,20 +7,51 @@
 //
 
 import XCTest
+import SwiftyJSON
+@testable import CoolBlueTest
 
 class TestSearchFunction: XCTestCase {
+    var productListVM:ProductListViewModel?
+    var testHttpClient:HTTPRequestAPI?
+    
+    //TODO: test classes improvised, need refactoring
+    private final class TestHttpClient:HTTPRequestAPI {
+        
+        func searchFor(_ searchString: String, page: Int, completion: @escaping (Dictionary<String, Any>?, Error?) -> Void) {
+            if let responseString = PlistManager.sharedInstance.getKeyFromPlist(plistName: TestConstants.testPlistFilename, key: TestConstants.key_test_search_json, bundle:Bundle(for: type(of: self))) as? String {
+                if let dataFromString = responseString.data(using: .utf8, allowLossyConversion: false) {
+                    do{
+                        let json = try JSON(data: dataFromString)
+                        if let dict = json.dictionaryObject {
+                            
+                            completion(dict, nil)
+  
+                        }
+                    }
+                    catch {
+                        print("Something went wrong")
+                    }
+                    
+                }
+            }
+        }
+        
+        func requestProductDetailsWithID(_ productID: String, completion: @escaping (Dictionary<String, Any>?, Error?) -> Void) {
+            
+        }
+        
+        
+    }
         
     override func setUp() {
         super.setUp()
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        
+        testHttpClient = TestHttpClient()
+        self.productListVM = ProductListViewModel(httpManager: testHttpClient!)
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+       
     }
     
     override func tearDown() {
@@ -28,9 +59,15 @@ class TestSearchFunction: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    
+    func testNumberOfElements() {
+        self.productListVM?.searchFor(searchString: "Something")
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let numberOfItems = self.productListVM?.getNumberOfRowsForSectionIndex(0)
+        XCTAssertEqual(numberOfItems, 24, "There should be 24 items")
+        
     }
+
     
 }

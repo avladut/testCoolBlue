@@ -29,6 +29,9 @@
 		EE3AC97920FF1FEC00868999 /* HTTPRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3AC97820FF1FEC00868999 /* HTTPRequestAPI.swift */; };
 		EEA00DAB20FDD6A000352225 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA00DAA20FDD6A000352225 /* ProductDetailsVC.swift */; };
 		EEA00DAE20FDD70100352225 /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA00DAD20FDD70100352225 /* ProductDetailsViewModel.swift */; };
+		EED5DDA620FF2D3600EF40B8 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5DDA520FF2D3600EF40B8 /* TestConstants.swift */; };
+		EED5DDA820FF2DD700EF40B8 /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = EED5DDA720FF2DD700EF40B8 /* TestData.plist */; };
+		EED5DDAA20FF30AE00EF40B8 /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5DDA920FF30AE00EF40B8 /* PlistManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		EE3AC97820FF1FEC00868999 /* HTTPRequestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestAPI.swift; sourceTree = "<group>"; };
 		EEA00DAA20FDD6A000352225 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
 		EEA00DAD20FDD70100352225 /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
+		EED5DDA520FF2D3600EF40B8 /* TestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
+		EED5DDA720FF2DD700EF40B8 /* TestData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
+		EED5DDA920FF30AE00EF40B8 /* PlistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,8 @@
 				EE3AC96920FF183B00868999 /* TestSearchFunction.swift */,
 				EE3386DA20FB332000DFBFFA /* CoolBlueTestTests.swift */,
 				EE3386DC20FB332000DFBFFA /* Info.plist */,
+				EED5DDA520FF2D3600EF40B8 /* TestConstants.swift */,
+				EED5DDA720FF2DD700EF40B8 /* TestData.plist */,
 			);
 			path = CoolBlueTestTests;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 			children = (
 				EE3386EB20FB3F6800DFBFFA /* ErrorHandlerManager.swift */,
 				EE3386C220FB332000DFBFFA /* AppDelegate.swift */,
+				EED5DDA920FF30AE00EF40B8 /* PlistManager.swift */,
 			);
 			path = Singletons;
 			sourceTree = "<group>";
@@ -362,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED5DDA820FF2DD700EF40B8 /* TestData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,11 +405,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoolBlueTest/Pods-CoolBlueTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -436,6 +448,7 @@
 				EE3386F320FB53C500DFBFFA /* SearchScreenVC.swift in Sources */,
 				EE3386CB20FB332000DFBFFA /* CoolBlueTest.xcdatamodeld in Sources */,
 				EE37F33720FDAD880052B48D /* ProductDetails.swift in Sources */,
+				EED5DDAA20FF30AE00EF40B8 /* PlistManager.swift in Sources */,
 				EE3AC97720FF1FDE00868999 /* HTTPRequestManager.swift in Sources */,
 				EE37F33C20FDB59E0052B48D /* DatasourceUpdateProtocol.swift in Sources */,
 				EEA00DAB20FDD6A000352225 /* ProductDetailsVC.swift in Sources */,
@@ -454,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE3386DB20FB332000DFBFFA /* CoolBlueTestTests.swift in Sources */,
+				EED5DDA620FF2D3600EF40B8 /* TestConstants.swift in Sources */,
 				EE3AC96A20FF183B00868999 /* TestSearchFunction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
