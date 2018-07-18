@@ -15,16 +15,14 @@ public class ErrorHandlerManager {
         
     }
     
-    func showSimpleAlert(title:String, message:String, parentVC:UIViewController?) -> UIAlertController{
+    func showSimpleAlert(title:String, message:String) -> UIAlertController{
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (alertVC) in
-            //parentVC.dismiss(animated: true, completion: nil)
-        }))
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         return alert
     }
     
     func showError(message:String, parentVC:UIViewController?){
-        let alert = self.showSimpleAlert(title: "Error", message: message, parentVC: parentVC)
+        let alert = self.showSimpleAlert(title: "Error", message: message)
         parentVC?.present(alert, animated: true, completion: nil)
     }
     

@@ -25,7 +25,8 @@ class ProductDetailsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let productIDUnwr = self.productID {
-            initProductViewModel(productID: productIDUnwr)
+            initProductViewModel(productID: productIDUnwr, httpManager:  HTTPRequestManager(baseUrlString: Constants.URLS.baseURLString))
+            requestProductDetails(productID: productIDUnwr)
         }
     }
 
@@ -34,19 +35,21 @@ class ProductDetailsVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func initProductViewModel(productID:String) {
-        self.productDetailsVM = ProductDetailsViewModel(productID: productID)
+    func initProductViewModel(productID:String, httpManager:HTTPRequestAPI) {
+        self.productDetailsVM = ProductDetailsViewModel(productID: productID, httpManager: httpManager)
         //add observer
         
-        let observationForName = productDetailsVM?.observe(\ProductDetailsViewModel.productName) { (model, change) in
-            self.lblProductName.text = String(model.productName)
+        let observationForName = productDetailsVM?.observe(\ProductDetailsViewModel.strProductName) { (model, change) in
+            self.lblProductName.text = String(model.strProductName)
         }
-        let observationForText = productDetailsVM?.observe(\ProductDetailsViewModel.productText) { (model, change) in
-            self.lblProductDescription.text = String(model.productText)
+        let observationForText = productDetailsVM?.observe(\ProductDetailsViewModel.strProductText) { (model, change) in
+            self.lblProductDescription.text = String(model.strProductText)
         }
         observers.append(observationForName!)
         observers.append(observationForText!)
-        
+    }
+    
+    func requestProductDetails(productID:String){
         productDetailsVM?.requestProductDetailsWithID(productID: productID)
     }
 

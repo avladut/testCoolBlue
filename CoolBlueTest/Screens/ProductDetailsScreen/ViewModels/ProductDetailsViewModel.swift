@@ -9,22 +9,29 @@
 import Foundation
 @objcMembers class ProductDetailsViewModel:NSObject {
     var productID:String?
-    dynamic public var productName:String = ""
-    dynamic public var productText:String = ""
+    dynamic public var strProductName:String = ""
+    dynamic public var strProductText:String = ""
     
-    init(productID:String) {
+    private var httpManager:HTTPRequestAPI?
+    private var productDetailsModel:ProductDetails? {
+        willSet {
+            self.strProductName = (newValue?.productName)!
+            self.strProductText = (newValue?.productText)!
+        }
+    }
+    
+    init(productID:String, httpManager:HTTPRequestAPI) {
         self.productID = productID
+        self.httpManager = httpManager
     }
     
     func requestProductDetailsWithID(productID:String){
-        NetworkRequestManager.sharedInstance.requestProductDetailsWithID(productID, completion: { [weak self] (dict, error) in
+        guard let manager = httpManager else {
+            return
+        }
+        manager.requestProductDetailsWithID(productID, completion: { [weak self] (dict, error) in
             if let productDictUnwrapped = dict?["product"] as? Dictionary<String, Any> {
-                if let productNameString = productDictUnwrapped[Constants.JsonKeyNames.productName] as? String {
-                    self?.productName = productNameString
-                }
-                if let productTextString = productDictUnwrapped[Constants.JsonKeyNames.productText] as? String {
-                    self?.productText = productTextString
-                }
+                self?.productDetailsModel = ProductDetails(dict: productDictUnwrapped)
             }
         })
     }

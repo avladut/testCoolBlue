@@ -16,7 +16,7 @@ class SearchScreenVC: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var lblSearchStatus: UILabel!
-    private let productsViewModel = SearchTableVM()
+    private let productsViewModel = ProductListViewModel(httpManager: HTTPRequestManager(baseUrlString: Constants.URLS.baseURLString))
     
     override func viewDidLoad() {
         super.viewDidLoad()

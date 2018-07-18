@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class ProductBasic {
+struct ProductBasic {
     var productID:String?
     var productName:String?
     var productPrice:Float?

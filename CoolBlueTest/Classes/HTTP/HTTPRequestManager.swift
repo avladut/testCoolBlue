@@ -8,18 +8,18 @@
 
 import Foundation
 import Alamofire
-public class NetworkRequestManager {
-    public static let sharedInstance = NetworkRequestManager()
+public class HTTPRequestManager {
+    private var strBaseURL:String = Constants.URLS.baseURLString
     
-    private let baseURLString:String = "https://bdk0sta2n0.execute-api.eu-west-1.amazonaws.com/ios-assignment/"
-    
-    private init(){
-        
+    init(baseUrlString:String){
+        strBaseURL = baseUrlString
     }
-    
+}
+
+extension HTTPRequestManager:HTTPRequestAPI {
     public func searchFor(_ searchString:String, page:Int, completion: @escaping (_ response:Dictionary<String, Any>?, _ err:Error?)->Void) {
         let parameters:Parameters = ["query":searchString, "page" : page]
-        let searchUrl:String = "\(baseURLString)search"
+        let searchUrl:String = "\(strBaseURL)search"
         Alamofire.request(searchUrl, method: .get, parameters: parameters, encoding: URLEncoding.queryString, headers: nil).validate().responseJSON { (response) in
             //print (response)
             let responseDict = response.result.value as? Dictionary<String, Any>
@@ -30,7 +30,7 @@ public class NetworkRequestManager {
     
     public func requestProductDetailsWithID(_ productID:String, completion: @escaping (_ response:Dictionary<String, Any>?, _ err:Error?)->Void) {
         
-        let productUrl:String = "\(baseURLString)product/\(productID)"
+        let productUrl:String = "\(strBaseURL)product/\(productID)"
         Alamofire.request(productUrl, method: .get, parameters: nil, encoding: URLEncoding.queryString, headers: nil).validate().responseJSON { (response) in
             //print (response)
             let responseDict = response.result.value as? Dictionary<String, Any>

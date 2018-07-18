@@ -22,5 +22,10 @@ struct Constants {
     struct ImageNames {
         static let placeholderImage = "Placeholder"
     }
+    
+    struct URLS {
+        static let baseURLString = "https://bdk0sta2n0.execute-api.eu-west-1.amazonaws.com/ios-assignment/"
+        static let testURLString = "https://bdk0sta2n0.execute-api.eu-west-1.amazonaws.com/ios-assignment/"
+    }
 }
 
